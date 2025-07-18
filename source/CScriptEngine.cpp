@@ -402,6 +402,11 @@ namespace CLEO
         processFileList(list);
         CLEO_StringListFree(list);
 
+        searchPattern = Filepath_RootCleo + "\\*" + cs_ext;
+        list = CLEO_ListDirectory(nullptr, searchPattern.c_str(), false, true);
+        processFileList(list);
+        CLEO_StringListFree(list);
+        
         searchPattern = Filepath_Cleo + "\\*" + cs3_ext;
         list = CLEO_ListDirectory(nullptr, searchPattern.c_str(), false, true);
         processFileList(list);
