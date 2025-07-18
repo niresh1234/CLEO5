@@ -73,5 +73,7 @@ static std::string GetUserDirectory() // already stored in Filepath_User
 inline const std::string Filepath_Game = GetGameDirectory();
 inline const std::string Filepath_User = GetUserDirectory();
 inline const std::string Filepath_Cleo = Filepath_Game + "\\cleo";
-inline const std::string Filepath_Config = Filepath_Cleo + "\\.cleo_config.ini";
-inline const std::string Filepath_Log = Filepath_Game + "\\cleo.log";
+inline const std::string Filepath_CLEO_ASI = FS::current_path().string();
+inline const std::string Filepath_CLEO_REL = Filepath_CLEO_ASI + "\\cleo";
+inline const std::string Filepath_Config = Filepath_CLEO_REL + "\\.cleo_config.ini";
+inline const std::string Filepath_Log = Filepath_CLEO_REL + "\\.cleo.log";
