@@ -316,7 +316,7 @@ std::string CCustomScript::ResolvePath(const char* path, const char* customWorkD
         case VPref::User: resolved = Filepath_User; break;
         case VPref::Script: resolved = GetScriptFileDir(); break;
         case VPref::Game: resolved = Filepath_Game; break;
-        case VPref::Cleo: resolved = Filepath_Cleo; break;
+        case VPref::Cleo: resolved = Filepath_RootCleo; break;
         case VPref::Modules: resolved = Filepath_Cleo + "\\cleo_modules"; break;
         default: resolved = "<error>"; break; // should never happen
     }
