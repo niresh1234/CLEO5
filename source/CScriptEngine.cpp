@@ -512,7 +512,7 @@ namespace CLEO
 
         if(saveSlot == -1) return; // new game started
 
-        auto saveFile = FS::path(Filepath_Cleo).append(StringPrintf("cleo_saves\\cs%d.sav", saveSlot)).string();
+        auto saveFile = FS::path(Filepath_CLEO_REL).append(StringPrintf("cleo_saves\\cs%d.sav", saveSlot)).string();
 
         // load cleo saving file
         try
