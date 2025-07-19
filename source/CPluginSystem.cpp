@@ -77,9 +77,9 @@ void CPluginSystem::LoadPlugins()
 
     TRACE(""); // separator
     TRACE("Listing CLEO plugins:");
-    ScanPluginsDir(FS::path(Filepath_Cleo).append("cleo_plugins").string(), "SA.", ".cleo");
-    ScanPluginsDir(FS::path(Filepath_Cleo).append("cleo_plugins").string(), "", ".cleo"); // legacy plugins in new location
-    ScanPluginsDir(Filepath_Cleo, "", ".cleo"); // legacy plugins in old location
+    ScanPluginsDir(FS::path(Filepath_CLEO_REL).append("cleo_plugins").string(), "SA.", ".cleo");
+    ScanPluginsDir(FS::path(Filepath_CLEO_REL).append("cleo_plugins").string(), "", ".cleo"); // legacy plugins in new location
+    ScanPluginsDir(Filepath_CLEO_REL, "", ".cleo"); // legacy plugins in old location
 
     // reverse order, so opcodes from CLEO5 plugins can overwrite opcodes from legacy plugins
     if (!paths.empty())
