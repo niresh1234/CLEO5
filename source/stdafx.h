@@ -85,10 +85,10 @@ inline void UpdateUserDirectoryPath()
     CLEO::FilepathNormalize(p);
     const_cast<std::string&>(GetUserDirectory()) = std::move(p);
 }
-
+inline const std::string Filepath_CLEO_ASI = FS::current_path().string();
 inline const std::string& GetCleoDirectory()
 {
-    static std::string path = GetGameDirectory() + "\\cleo";
+    static std::string path = Filepath_CLEO_ASI + "\\cleo";
     return path;
 }
 
