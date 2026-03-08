@@ -88,7 +88,7 @@ inline void UpdateUserDirectoryPath()
 
 inline const std::string& GetCleoDirectory()
 {
-    static std::string path = GetGameDirectory() + "\\cleo";
+    static std::string path = "cleo";
     return path;
 }
 
