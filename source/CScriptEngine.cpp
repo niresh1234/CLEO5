@@ -397,6 +397,11 @@ namespace CLEO
         processFileList(list);
         CLEO_StringListFree(list);
 
+        searchPattern = GetGameDirectory() + "\\cleo" + "\\*" + cs_ext;
+        list          = CLEO_ListDirectory(nullptr, searchPattern.c_str(), false, true);
+        processFileList(list);
+        CLEO_StringListFree(list);
+        
         searchPattern = GetCleoDirectory() + "\\*" + cs3_ext;
         list          = CLEO_ListDirectory(nullptr, searchPattern.c_str(), false, true);
         processFileList(list);
